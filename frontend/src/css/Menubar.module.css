@@ -1,0 +1,85 @@
+.menu {
+  background: #0d47a1;
+  padding: 8px 0;
+  position: relative;
+}
+
+/* Desktop Menu */
+.menuList {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  transition: max-height 0.4s ease;   /* smooth animation */
+}
+
+.menuList li {
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menuList li:hover {
+  text-decoration: underline;
+}
+
+/* HAMBURGER — HIDDEN ON DESKTOP */
+.hamburger {
+  display: none; 
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+/* ICON ANIMATIONS */
+.openIcon,
+.closeIcon {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hide {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.showIcon {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* 📱 MOBILE VIEW FIX */
+@media (max-width: 768px) {
+
+  /* SHOW hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menu hidden initially */
+  .menuList {
+    flex-direction: column;
+    background: #0d47a1;
+    width: 100%;
+    max-height: 0;              /* hidden */
+    overflow: hidden;
+    padding: 0;
+  }
+
+  /* When menu opens — smooth slide */
+  .show {
+    max-height: 400px;          /* enough for items */
+    padding: 15px 0;
+  }
+}
+
+/* 🖥️ DESKTOP VIEW */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;              /* hide hamburger on large screens */
+  }
+}
