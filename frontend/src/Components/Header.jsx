@@ -13,7 +13,7 @@ const Header = () => {
 
       {/* Right Side Text */}
       <div className={styles.textBox}>
-        <h1 className={styles.collegeName}>Shri vishwanath inter college kalan sultanpur</h1>
+        <h1 className={styles.collegeName}>Shri Vishwanath Inter College Kalan Sultanpur</h1>
         <p className={styles.tagline}>
           श्री विश्वनाथ इण्टर कॉलेज कलान सुलतानपुर
         </p>
