@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import Header from './Components/Header';
 
+import Header from './Components/Header';
+import Menubar from './Components/Menubar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
 function App() {
@@ -8,11 +9,21 @@ function App() {
 
   return (
     <>
-    <Header />
+    <BrowserRouter>
+      {/* <Header /> */}
+      <Menubar />
+
+      <Routes>
+        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route path="/about" element={<h1>About Us</h1>} />
+        <Route path="/contact" element={<h1>Contact Page</h1>} />
+      </Routes>
+    </BrowserRouter>
+    
   
       
     </>
   )
 }
 
-export default App
+export default App;
