@@ -1,6 +1,7 @@
 
 import Header from './Components/Header';
 import Menubar from './Components/Menubar';
+import HomePageSlider from './Components/HomePageSlider';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
@@ -12,7 +13,8 @@ function App() {
     <BrowserRouter>
       {/* <Header /> */}
       <Menubar />
-
+      <HomePageSlider />
+      
       <Routes>
         <Route path="/" element={<h1>Home Page</h1>} />
         <Route path="/about" element={<h1>About Us</h1>} />
