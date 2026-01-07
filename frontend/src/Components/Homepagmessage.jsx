@@ -9,7 +9,7 @@ export function Homepagemessage(props) {
     const [isReadmore, setisReadmore]=useState(false);
 
     const handleReadMore = ()=>{
-        setisReadmore(true);
+        setisReadmore(!isReadmore);
         console.log(isReadmore)
        
     }
