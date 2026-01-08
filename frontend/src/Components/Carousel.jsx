@@ -35,8 +35,22 @@ export default function Carousel({ children }) {
 
     }
     function handlePrevious() {
+        // stop interval
+    clearInterval(intervalRef.current);
 
+    const { slides, count } = getSlidesInfo();
+
+    const newIndex = currentIndex === 0 ? count - 1 : currentIndex - 1;
+
+    [...slides].forEach((slide, index) => {
+      slide.setAttribute("data-active", index === newIndex);
+    });
+
+
+    setCurrentIndex(newIndex);
     }
+
+   
 
     function handleNext() {
         clearInterval(intervalRef);
@@ -58,25 +72,25 @@ export default function Carousel({ children }) {
     }
 
     return (
-        <>
+        <div className={styles.caouselcontainer}>
 
-            {currentIndex}
+           
             <div className={styles.imagebox} ref={CarouselBoxRef}>
                 {children}
-                <div className={`${styles.sliderBtn}`}>
-                    <div className={`${styles.sliderBtnEffect} ${styles.sliderLeftBtn}`} onClick={handlePrevious}>
-                        <FaLessThan />
-                    </div>
-
-                    <div className={`${styles.sliderBtnEffect} ${styles.sliderLeftBtn}`} onClick={handleNext}>
-                        <FaGreaterThan />
-                    </div>
-
-
-
-                </div>
             </div>
-        </>
+            <div className={`${styles.sliderBtn}`}>
+                <div className={`${styles.sliderBtnEffect} ${styles.sliderLeftBtn}`} onClick={handlePrevious}>
+                    <FaLessThan />
+                </div>
+
+                <div className={`${styles.sliderBtnEffect} ${styles.sliderLeftBtn}`} onClick={handleNext}>
+                    <FaGreaterThan />
+                </div>
+
+
+
+            </div>
+       </div>
     )
 }
 
