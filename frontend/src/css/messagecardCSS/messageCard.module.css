@@ -1,11 +1,3 @@
-.wrapper {
-    width: 100%;
-    height: auto;
-    padding: 30px;
-    border: 2px solid blue;
-
-
-}
 
 .grid {
 
@@ -18,7 +10,7 @@
 .box {
 
     position: relative;
-    border: 2px solid rgb(0, 255, 17);
+    /* border: 2px solid rgb(0, 255, 17); */
     padding: 40px 20px 20px;
     box-shadow: 2px 2px 5px 8px rgba(0, 0, 0, 0.5);
 }
@@ -41,7 +33,7 @@
 /* Content */
 .content {
 
-    border: 2px solid red;
+    /* border: 2px solid red; */
     min-height: 260px;
     padding: 2rem;
     font-size: 18px;

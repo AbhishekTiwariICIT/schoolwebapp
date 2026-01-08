@@ -1,4 +1,5 @@
 import styles from '../css/HomePageSlider.module.css';
+import Message from './MessageCard/Message';
 import Carousel from './Carousel';
 import { Homepagemessage } from './Homepagmessage';
 import pic1 from '../assets/Images/pic1.jpg';
@@ -17,7 +18,8 @@ export default function HomePageSlider() {
                 <img src={pic4} alt="image 4 not found" />
             </Carousel>
 
-        <Homepagemessage messageimg={`${messageimg} `}/>
+        {/* <Homepagemessage messageimg={`${messageimg} `}/> */}
+        <Message />
         </div>
 
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from '../css/Homepagemessage.module.css';
 
 
+
 export function Homepagemessage(props) {
 
     const { messageimg } = props;
@@ -25,7 +26,7 @@ export function Homepagemessage(props) {
                             <img src={messageimg} alt="image not found" className={styles.pmsgimg} />
                             
                         </div>
-                        <div className={styles.content}>
+                        <div className={`${styles.content} ${isReadmore ? styles.msgdatashow : styles.msgdatahide}`}>
                             <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                              Quae ducimus esse fugit error ipsam excepturi
@@ -63,22 +64,11 @@ export function Homepagemessage(props) {
                              aliquam illo voluptates ab quia velit nam soluta
                               fugiat incidunt, repellat similique praesentium quas ullam.
                             </span>
-                            <button onClick={handleReadMore}>Read More</button>
+                            <button onClick={handleReadMore} className={styles.msgbtn}>{isReadmore ? "Read Less" : "..."}</button>
                         </div>
                     </div>
 
-                    <div className={styles.box}>
-                        <div className={styles.title}>Message</div>
-                        <div className={`${styles.content} ${styles.pmsgimgbox}`}>
-                            
-                            <img src={messageimg} alt="image not found" className={styles.pmsgimg} />
-                         
-                        </div>
-                        <div className={styles.content}>
-                            
-                         
-                        </div>
-                    </div>
+                    
 
                 </div>
             </div>
