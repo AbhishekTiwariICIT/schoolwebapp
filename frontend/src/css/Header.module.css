@@ -7,6 +7,9 @@
   gap: 4rem;
   background: #ffffff;
   border-bottom: 3px solid #0d47a1;
+  z-index: 2;
+  position: sticky;
+  top:0;
   
 
 }

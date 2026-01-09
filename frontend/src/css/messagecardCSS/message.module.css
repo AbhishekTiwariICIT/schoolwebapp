@@ -1,9 +1,16 @@
 .wrapper {
     width: 100%;
-    padding: 30px;
-    border: 2px solid blue;
+    padding: 30px 15px;
+    /* border: 2px solid blue; */
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr; /* 1 column = row wise */
+  }
 }

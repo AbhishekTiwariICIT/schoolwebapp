@@ -2,7 +2,7 @@
 import Header from './Components/Header';
 import Menubar from './Components/Menubar';
 import HomePageSlider from './Components/HomePageSlider';
-import Footer from './Components/Footer'
+import Footer from './Components/Footer.jsx';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      {/* <Header /> */}
+      <Header />
       <Menubar />
       
       
