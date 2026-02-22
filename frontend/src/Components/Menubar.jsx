@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 const Menubar = () => {
     const [showMenu, setShowMenu] = useState(true);
-
+    
 
     useEffect(() => {
         console.log(showMenu);
