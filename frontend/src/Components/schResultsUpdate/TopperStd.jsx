@@ -2,6 +2,20 @@ import styles from '../../css/schResultsUpdate/topperStd.module.css';
 
 function TopperStd({ data }) {
 
+    const linkdata = [
+        {
+            hyperef: "###",
+            content: "iure aspernatur quis nihil"
+        },
+        {
+            hyperef: "###",
+            content: "iure aspernatur quis nihil"
+        },
+        {
+            hyperef: "###",
+            content: "iure aspernatur quis nihil"
+        }
+    ]
 
 
 
@@ -27,12 +41,18 @@ function TopperStd({ data }) {
                     <span>Latest News</span>
                 </div>
                 <div className={styles.latestNewsSectionContent}>
-                   <div className={styles.linkContent}>
-                    <p><a href="###">hello</a></p>
-                    <p><a href="###">hello</a></p>
-                    <p><a href="###">hello</a></p>
-                    
-                   </div>
+                    <div className={styles.linkContent}>
+                        {linkdata.map((item, index) =>
+                        (
+                            <div className={styles.newsLinkChildSection}>
+                                <div className={styles.NewsBullet}></div>
+                                <div className={styles.Line}></div>
+                                <div className={styles.newsContent}></div>
+                                <span key={index}>{item.content}</span>
+                            </div>
+                        ))}
+
+                    </div>
                 </div>
             </div>
         </div>

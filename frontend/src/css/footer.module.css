@@ -94,6 +94,9 @@
     text-align: center;
   }
 
+  .brand h2{
+    font-size: 1.7rem;
+  }
   .links ul li,
   .sociallink .icons {
     justify-content: center;
